@@ -7,7 +7,7 @@ defmodule BasicAuth.Response do
 
   def unauthorise(conn, realm, custom_response) do
     conn
-    |> Plug.Conn.put_resp_header("www-authenticate", "Basic realm=\"#{realm || @default_realm}\"")
+    #|> Plug.Conn.put_resp_header("www-authenticate", "Basic realm=\"#{realm || @default_realm}\"")
     |> set_header_with_body(custom_response)
   end
 
